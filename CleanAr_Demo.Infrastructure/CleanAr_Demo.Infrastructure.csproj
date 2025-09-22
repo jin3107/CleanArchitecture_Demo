@@ -28,8 +28,8 @@
 
   <ItemGroup>
     <Folder Include="Multitenantcy\" />
+    <Folder Include="Persistences\Repositories\" />
     <Folder Include="Services\" />
-    <Folder Include="Persistences\" />
   </ItemGroup>
 
 </Project>
