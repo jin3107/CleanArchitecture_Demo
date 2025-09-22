@@ -1,0 +1,28 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CleanAr_Demo.Domain\CleanAr_Demo.Domain.csproj" />
+    <ProjectReference Include="..\MayNghien.Infrastructures\MayNghien.Infrastructures\MayNghien.Infrastructures.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Commands\Behaviors\" />
+    <Folder Include="Commands\Mappings\" />
+    <Folder Include="Commands\Models\Authentication\Requests\" />
+    <Folder Include="Commands\Models\Authentication\Responses\" />
+    <Folder Include="Commands\Models\Requests\" />
+    <Folder Include="Commands\Models\Responses\" />
+    <Folder Include="Features\Categories\Commands\" />
+    <Folder Include="Features\Categories\Queries\" />
+    <Folder Include="Features\Products\Commands\" />
+    <Folder Include="Features\Products\Queries\" />
+    <Folder Include="Interfaces\" />
+  </ItemGroup>
+
+</Project>
