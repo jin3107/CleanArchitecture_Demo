@@ -1,5 +1,6 @@
 ﻿using CleanAr_Demo.Application.Commands.Models.Requests;
 using CleanAr_Demo.Application.Commands.Models.Responses;
+using CleanAr_Demo.Application.Features.Categories.Commands.CreateCategory;
 using CleanAr_Demo.Domain.Entities;
 using System;
 using System.Collections.Generic;
@@ -20,7 +21,7 @@ namespace CleanAr_Demo.Application.Commands.Mappings
             };
         }
 
-        public static Category ToEntity(CategoryRequest request)
+        public static Category ToEntity(CreateCategoryCommand request)
         {
             return new Category
             {

@@ -12,10 +12,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Commands\Behaviors\" />
-    <Folder Include="Commands\Models\Authentication\Requests\" />
-    <Folder Include="Commands\Models\Authentication\Responses\" />
-    <Folder Include="Features\Categories\Commands\" />
+    <Folder Include="Commons\Behaviors\" />
+    <Folder Include="Commons\Models\Authentication\Requests\" />
+    <Folder Include="Commons\Models\Authentication\Responses\" />
     <Folder Include="Features\Categories\Queries\" />
     <Folder Include="Features\Products\Commands\" />
     <Folder Include="Features\Products\Queries\" />

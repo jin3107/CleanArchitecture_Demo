@@ -15,10 +15,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\CleanAr_Demo.Application\CleanAr_Demo.Application.csproj" />
     <ProjectReference Include="..\CleanAr_Demo.Infrastructure\CleanAr_Demo.Infrastructure.csproj" />
     <ProjectReference Include="..\MayNghien.Infrastructures\MayNghien.Infrastructures\MayNghien.Infrastructures.csproj" />
