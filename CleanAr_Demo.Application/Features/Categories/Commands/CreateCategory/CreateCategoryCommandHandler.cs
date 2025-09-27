@@ -1,5 +1,5 @@
 ﻿using CleanAr_Demo.Application.Commands.Mappings;
-using CleanAr_Demo.Application.Commands.Models.Requests;
+using CleanAr_Demo.Application.Commands.Models.Responses;
 using CleanAr_Demo.Application.Interfaces;
 using MediatR;
 using System;
@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace CleanAr_Demo.Application.Features.Categories.Commands.CreateCategory
 {
-    public class CreateCategoryCommandHandler : MediatR.IRequestHandler<CreateCategoryCommand, CategoryRequest>
+    public class CreateCategoryCommandHandler : MediatR.IRequestHandler<CreateCategoryCommand, CategoryResponse>
     {
         private readonly IApplicationDbContext _context;
 
@@ -19,16 +19,16 @@ namespace CleanAr_Demo.Application.Features.Categories.Commands.CreateCategory
             _context = context;
         }
 
-        public async Task<CategoryRequest> Handle(CreateCategoryCommand request, CancellationToken cancellationToken)
+        public async Task<CategoryResponse> Handle(CreateCategoryCommand request, CancellationToken cancellationToken)
         {
-            var category = CategoryMapper.ToEntity(request);
+            var category = CategoryMapper.ToCreateEntity(request);
             category.CreatedOn = DateTime.UtcNow;
 
             _context.Categories.Add(category);
 
             await _context.SaveChangesAsync(cancellationToken);
-            var categoryRequest = CategoryMapper.ToRequest(category);
-            return categoryRequest;
+            var categoryResponse = CategoryMapper.ToResponse(category);
+            return categoryResponse;
         }
     }
 }

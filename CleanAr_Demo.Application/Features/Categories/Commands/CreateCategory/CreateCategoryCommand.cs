@@ -1,4 +1,4 @@
-﻿using CleanAr_Demo.Application.Commands.Models.Requests;
+﻿using CleanAr_Demo.Application.Commands.Models.Responses;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -8,10 +8,8 @@ using System.Threading.Tasks;
 
 namespace CleanAr_Demo.Application.Features.Categories.Commands.CreateCategory
 {
-    public class CreateCategoryCommand : MediatR.IRequest<CategoryRequest>
+    public class CreateCategoryCommand : MediatR.IRequest<CategoryResponse>
     {
-        [Required]
-        [StringLength(100, ErrorMessage = "Category name must not exceed 100 characters.")]
         public string Name { get; set; }
     }
 }

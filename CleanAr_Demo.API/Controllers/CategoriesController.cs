@@ -1,5 +1,7 @@
-﻿using CleanAr_Demo.Application.Features.Categories.Commands.CreateCategory;
-using CleanAr_Demo.Application.Features.Categories.Commands.GetCategory;
+﻿using CleanAr_Demo.Application.Commands.Models.Responses;
+using CleanAr_Demo.Application.Features.Categories.Commands.CreateCategory;
+using CleanAr_Demo.Application.Features.Categories.Queries.GetAllCategory;
+using CleanAr_Demo.Application.Features.Categories.Queries.GetCategory;
 using MediatR;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -27,9 +29,16 @@ namespace CleanAr_Demo.API.Controllers
         [HttpGet("{id}")]
         public async Task<IActionResult> GetById([FromRoute] Guid id)
         {
-            var command = new GetCategoryCommand { Id = id };
+            var command = new GetCategoryQuery { Id = id };
             var category = await _mediator.Send(command);
             return Ok(category);
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> GetAll()
+        {
+            var categories = await _mediator.Send(new GetAllCategoryQuery());
+            return Ok(categories);
         }
     }
 }

@@ -21,7 +21,7 @@ namespace CleanAr_Demo.Application.Commands.Mappings
             };
         }
 
-        public static Category ToEntity(CreateCategoryCommand request)
+        public static Category ToCreateEntity(CreateCategoryCommand request)
         {
             return new Category
             {

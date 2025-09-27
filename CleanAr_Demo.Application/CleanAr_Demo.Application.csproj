@@ -15,7 +15,6 @@
     <Folder Include="Commons\Behaviors\" />
     <Folder Include="Commons\Models\Authentication\Requests\" />
     <Folder Include="Commons\Models\Authentication\Responses\" />
-    <Folder Include="Features\Categories\Queries\" />
     <Folder Include="Features\Products\Commands\" />
     <Folder Include="Features\Products\Queries\" />
   </ItemGroup>
